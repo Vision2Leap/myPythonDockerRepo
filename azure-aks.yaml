@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mypythondockerrepo
-        image: hariacr21.azurecr.io/verizonbyte:tagged-'$(Build.BuildId)'
+        image: hariacr21.azurecr.io/verizonbyte:'tagged-$(Build.BuildId)'
         ports:
         - containerPort: 5000
 # service type loadbalancer       
