@@ -3,7 +3,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
 trigger:
-- azure-pipelines
+- master
 
 resources:
 - repo: self
@@ -14,7 +14,7 @@ variables:
   imageRepository: 'verizonbyte'
   containerRegistry: 'hariacr21.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
-  tag: 'tagged-$(Build.BuildId)'
+  tag: '$(Build.BuildId)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
